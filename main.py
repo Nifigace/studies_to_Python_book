@@ -1,15 +1,15 @@
 from datetime import datetime
+from random import randint
 import time
-import random
 
 
 odds = []
 
-for i in range(1, 61, 1):
+for i in range(0, 60, 1):
   if i % 2 == 0:
     odds.append(i)
 
-for i in range(0, random.randint(0, 21), 1):
+for i in range(0, randint(0, 21), 1):
 
     right_this_minute = datetime.today().minute
     
@@ -18,5 +18,5 @@ for i in range(0, random.randint(0, 21), 1):
     else:
         print("Not an odd minute")
     
-    time.sleep(random.randint(0, random.randint(0, 31)))
+    time.sleep(randint(0, randint(0, 31)))
 print('This is END')
